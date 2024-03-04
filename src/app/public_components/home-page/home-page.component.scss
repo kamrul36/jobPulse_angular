@@ -1,0 +1,25 @@
+.grid-container {
+    max-width: 1600px;
+}
+
+.banner-sec {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .cell {
+        background: #d7c5c5;
+        height: 300px;
+
+        h1 {
+            font-size: 2em;
+        }
+    }
+}
+
+.recent-jobs {
+    .job {
+        background: #f2eeee;
+        box-shadow: 2px 2px 3px #dedede;
+        margin-bottom: 20px;
+    }
+}

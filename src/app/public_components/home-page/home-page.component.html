@@ -1,0 +1,60 @@
+<div class="wrapper">
+    <div class="grid-x">
+        <div class="cell medium-6">
+            Logo
+        </div>
+        <div class="cell medium-6">
+            <div class="grid-x">
+
+                <div class="cell medium-2">
+                    <button class="button">Home</button>
+                </div>
+                <div class="cell medium-2">
+        
+                    <button class="button">About</button>
+                </div>
+                <div class="cell medium-2">
+                    <button class="button">Jobs</button>
+        
+                </div>
+                <div class="cell medium-2">
+        
+                    <button class="button">Blogs</button>
+                </div>
+                <div class="cell medium-2">
+        
+                    <button class="button">Contact</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+
+        <div class="grid-x banner-sec">
+            <div class="cell text-center">
+                <h1>Banner</h1>
+            </div>
+        </div>
+    
+        <div class="grid-x">
+            <div class="cell text-center">
+                <h1>Top companies</h1>
+    
+            </div>
+        </div>
+    
+        <div class="grid-x recent-jobs" *ngIf="recentJobs">
+            <h1>Recent Published Jobs</h1>
+            <div class="cell text-center" >
+                <div class="job" *ngFor="let jobs of recentJobs; let i= index" >
+                    <h2>{{jobs.title}}</h2>
+                    <p>{{jobs.type}}</p>
+                    <p>{{jobs.skills}}</p>
+                    <p>{{jobs.salary}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
