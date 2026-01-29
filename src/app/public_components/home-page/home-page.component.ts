@@ -18,7 +18,6 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getJobsData();
-    
   }
 
 

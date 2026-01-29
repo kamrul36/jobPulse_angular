@@ -1,60 +1,57 @@
-<div class="wrapper">
-    <div class="grid-x">
-        <div class="cell medium-6">
-            Logo
-        </div>
-        <div class="cell medium-6">
-            <div class="grid-x">
+<div class="w-full">
 
-                <div class="cell medium-2">
-                    <button class="button">Home</button>
-                </div>
-                <div class="cell medium-2">
-        
-                    <button class="button">About</button>
-                </div>
-                <div class="cell medium-2">
-                    <button class="button">Jobs</button>
-        
-                </div>
-                <div class="cell medium-2">
-        
-                    <button class="button">Blogs</button>
-                </div>
-                <div class="cell medium-2">
-        
-                    <button class="button">Contact</button>
+    <!-- Header -->
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center py-4">
+
+            <!-- Logo -->
+            <div class="text-lg font-bold">
+                Logo
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-end">
+                <div class="flex gap-4">
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Home</button>
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">About</button>
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Jobs</button>
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Blogs</button>
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Contact</button>
                 </div>
             </div>
+
         </div>
     </div>
 
-    <div class="grid-container">
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto px-4">
 
-        <div class="grid-x banner-sec">
-            <div class="cell text-center">
-                <h1>Banner</h1>
-            </div>
+        <!-- Banner -->
+        <div class="bg-gray-100 py-20 text-center mb-12">
+            <h1 class="text-4xl font-bold">Banner</h1>
         </div>
-    
-        <div class="grid-x">
-            <div class="cell text-center">
-                <h1>Top companies</h1>
-    
-            </div>
+
+        <!-- Top Companies -->
+        <div class="text-center mb-12">
+            <h1 class="text-3xl font-semibold">Top companies</h1>
         </div>
-    
-        <div class="grid-x recent-jobs" *ngIf="recentJobs">
-            <h1>Recent Published Jobs</h1>
-            <div class="cell text-center" >
-                <div class="job" *ngFor="let jobs of recentJobs; let i= index" >
-                    <h2>{{jobs.title}}</h2>
-                    <p>{{jobs.type}}</p>
-                    <p>{{jobs.skills}}</p>
-                    <p>{{jobs.salary}}</p>
+
+        <!-- Recent Jobs -->
+        <div *ngIf="recentJobs" class="mb-12">
+            <h1 class="text-3xl font-semibold text-center mb-8">
+                Recent Published Jobs
+            </h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="border rounded-lg p-6 shadow hover:shadow-lg transition"
+                    *ngFor="let jobs of recentJobs; let i = index">
+                    <h2 class="text-xl font-bold mb-2">{{ jobs.title }}</h2>
+                    <p class="text-gray-600"><strong>Type:</strong> {{ jobs.type }}</p>
+                    <p class="text-gray-600"><strong>Skills:</strong> {{ jobs.skills }}</p>
+                    <p class="text-gray-800 font-semibold mt-2"><strong>Salary:</strong> {{ jobs.salary }}</p>
                 </div>
             </div>
         </div>
-    </div>
 
+    </div>
 </div>
